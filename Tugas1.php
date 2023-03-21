@@ -7,7 +7,8 @@
     <title>Tugas 1 PHP</title>
 </head>
 <body bgcolor="#F5EBEB">
-    <br>
+    <h1 align="center">Menghitung Luas dan Keliling Jajar Genjang<hr/></h1>
+    <br><br>
     <form method = "POST">
         <table align="center" border="1" cellpadding="10" width="25%"> 
             <tr>
@@ -23,7 +24,7 @@
             </tr>
             <tr>
                 <td>Sisi Miring</td>
-                <td><input type="text" name="sisimiring" require></td>
+                <td><input type="text" name="sisiMiring" require></td>
             </tr>
             <tr>
                 <td colspan="2" align="center" style="background-color:#D5B4B4;">
@@ -35,9 +36,10 @@
     </form>
 
     <br><br>
+    <hr>
+    <br><br>
     <center>
     <?php
-        
         if(isset($_POST['luas'])){
             $alas = $_POST['alas'];
             $tinggi = $_POST['tinggi'];
@@ -53,15 +55,15 @@
 
         if(isset($_POST['keliling'])){
             $alas = $_POST['alas'];
-            $sisimiring = $_POST['sisimiring'];
+            $sisiMiring = $_POST['sisiMiring'];
 
-            $kelilingjajargenjang = 2 * ($alas + $sisimiring);
+            $keliling_jajar_genjang = 2 * ($alas + $sisiMiring);
             echo 'Keliling Jajar Genjang';
             echo '<br> Diketahui';
             echo '<br> Alas : '.$alas. 'cm';
-            echo '<br> Sisi Miring : '.$sisimiring. 'cm';
+            echo '<br> Sisi Miring : '.$sisiMiring. 'cm';
 
-            echo '<br> Maka Kelilingnya adalah ' .$kelilingjajargenjang. 'cm';
+            echo '<br> Maka Kelilingnya adalah ' .$keliling_jajar_genjang. 'cm';
         }
     ?>
     </center>
