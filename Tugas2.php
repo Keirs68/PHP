@@ -131,16 +131,16 @@
     <!-- menampilkan output -->
     <fieldset>
         <legend>Rincian Gaji Pegawai</legend>
-    Nama Pegawai : <?=  $nama ?>
-    <br>Jabatan : <?= $jabatan ?>
-    <br>Status : <?= $status ?>
-    <br> Agama : <?= $agama ?>
-    <br> Gaji Pokok : Rp<?= $gajiPokok ?>
-    <br> Tunjangan Jabatan : Rp. <?= $tunjanganJabatan ?>
-    <br> Tunjangan Keluarga : Rp. <?= $tunjanganKeluarga ?>
-    <br> Gaji Kotor : Rp. <?= $gajiKotor ?>
-    <br> Zakat : Rp. <?= $zakat ?>
-    <br> Take Home Pay : Rp. <?= $THP ?>
+        Nama Pegawai : <?=  $nama ?>
+        <br>Jabatan : <?= $jabatan ?>
+        <br>Status : <?= $status ?>
+        <br> Agama : <?= $agama ?>
+        <br> Gaji Pokok : Rp<?= $gajiPokok ?>
+        <br> Tunjangan Jabatan : Rp. <?= $tunjanganJabatan ?>
+        <br> Tunjangan Keluarga : Rp. <?= $tunjanganKeluarga ?>
+        <br> Gaji Kotor : Rp. <?= $gajiKotor ?>
+        <br> Zakat : Rp. <?= $zakat ?>
+        <br> Take Home Pay : Rp. <?= $THP ?>
     </fieldset>
     </center>
 </body>
