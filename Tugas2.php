@@ -128,9 +128,9 @@
     if(isset($tombol)){}
     ?>
 
+    <!-- menampilkan output -->
     <fieldset>
         <legend>Rincian Gaji Pegawai</legend>
-    <!-- menampilkan output -->
     Nama Pegawai : <?=  $nama ?>
     <br>Jabatan : <?= $jabatan ?>
     <br>Status : <?= $status ?>
