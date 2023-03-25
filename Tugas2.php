@@ -92,7 +92,7 @@
     $nama    = $_GET['nama'];
     $jabatan = $_GET['jabatan'];
     $status  = $_GET['status'];
-    $anak = $_GET['jumlahAnak'];
+    $anak    = $_GET['jumlahAnak'];
     $agama   = $_GET['agama'];
     $tombol  = $_GET['proses'];
 
@@ -134,6 +134,7 @@
         Nama Pegawai : <?=  $nama ?>
         <br>Jabatan : <?= $jabatan ?>
         <br>Status : <?= $status ?>
+        <br> Jumlah Anak : <?= $anak ?>
         <br> Agama : <?= $agama ?>
         <br> Gaji Pokok : Rp<?= $gajiPokok ?>
         <br> Tunjangan Jabatan : Rp. <?= $tunjanganJabatan ?>
