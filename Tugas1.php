@@ -12,7 +12,7 @@
     <form method = "POST">
         <table align="center" border="1" cellpadding="10" width="25%"> 
             <tr>
-                <th colspan="2" style="background-color:#D5B4B4; font-family:">JAJAR GENJANG</th>
+                <th colspan="2" style="background-color:#D5B4B4;">JAJAR GENJANG</th>
             </tr>
             <tr>
                 <td>Alas</td>
