@@ -2,14 +2,15 @@
 $ar_prodi = ["SI" => "Sistem Informasi", "TI" => "Teknik Informatika", "ILKOM" => "Ilmu Komputer", "TE" => "Teknik Elektro"];
 $ar_skill = ["HTML" => 10, "CSS" => 10, "Javascript" => 20, "RWD Bootstrap" => 20, "PHP" => 30, "MySQL" => 30, "Laravel" => 40];
 $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
-
 ?>
-<fieldset style="background-color:blanchedalmond; width:50%; right: 80px; position:absolute; top: 100px; left: 25%;">
-<legend>Form Registrasi Kelompok Belajar</legend>
+
+<fieldset style="background-color:blanchedalmond; width:50%; right: 80px; position:absolute; top: 10px; left: 25%;">
+<legend align="center"><h3>Form Registrasi Kelompok Belajar</h3></legend>
+<!-- Membuat Table -->
 <table cellpadding="5">
     <thead>
         <tr>
-            <th colspan="2">Form Registrasi</th>
+            <th colspan="2" align="justify">FORM REGISTRASI</th>
         </tr>
     </thead>
 
@@ -62,7 +63,6 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
                 </td>
             </tr>
             <tr>
-
             </tr>
             <tr>
                 <td>Domisili</td>
@@ -77,12 +77,19 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td>Email</td>
+                <td> : </td>
+                <td>
+                    <input type="email" name="email">
+                </td>
+            </tr>
     </tbody>
 
     <tfoot>
         <tr>
             <th colspan="2" align="justify">
-                <br><button name="proses">Submit</button>
+                <button name="proses">Submit</button>
             </th>
         </tr>
     </tfoot>
@@ -90,7 +97,7 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
 </table>
 </fieldset>
 
-<fieldset style="background-color:blanchedalmond; width: 50%; right: 80px; position:absolute; top: 400px; left: 25%;">
+<fieldset style="background-color:blanchedalmond; width: 50%; right: 80px; position:absolute; top: 370px; left: 25%;">
 <?php
 error_reporting(0);
 if(isset($_POST['proses'])) {
@@ -100,8 +107,10 @@ if(isset($_POST['proses'])) {
     $prodi = $_POST['prodi'];
     $skill = $_POST['skill'];
     $domisili = $_POST['domisili'];
+    $email = $_POST['email'];
 }
 
+//
 $score = 0;
 foreach($skill as $jumlah) {
     if(isset($ar_skill[$jumlah])) {
@@ -109,6 +118,7 @@ foreach($skill as $jumlah) {
     }
 }
 
+// prnggunaan fungsi untuk menentukan kategori skill
 function kategori($score) {
     if ($score >= 100 && $score <=150){
         return "Sangat Baik";
@@ -123,16 +133,66 @@ function kategori($score) {
     }
 }
 ?>
-NIM : <?= $nim ?><br>
-Nama : <?= $nama ?><br>
-Jenis Kelamin : <?= $jk ?><br>
-Program Studi : <?= $prodi ?><br>
-Skill : 
-<?php
-foreach( $skill as $s){ ?>
-<?= $s ?>,
-<?php } ?>
-<br>Skor Skill : <?= $score ?>
-<br>Kategori Skill : <?= kategori($score) ?>
-<br>Domisili : <?= $domisili ?>
+
+<!-- table untuk menampilkan output -->
+<table cellpadding="5">
+    <thead>
+        <tr>
+            <th colspan="2" align="justify">OUTPUT</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <form>
+            <tr>
+                <td>NIM</td>
+                <td> : </td>
+                <td> <?= $nim ?> </td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td> : </td>
+                <td> <?= $nama ?> </td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td> : </td>
+                <td> <?= $jk ?> </td>
+            </tr>
+            <tr>
+                <td>Program Studi</td>
+                <td> : </td>
+                <td> <?= $prodi ?> </td>
+            </tr>
+            <tr>
+                <td>Skill Programming</td>
+                <td> : </td>
+                <td>
+                <?php
+                    foreach( $skill as $s){ ?>
+                    <?= $s ?>,
+                    <?php } ?>
+                </td>
+            </tr>
+            <tr>
+                <td>Skor Skill</td>
+                <td> : </td>
+                <td> <?= $score ?> </td>
+            </tr>
+            <tr>
+                <td>Kategori Skill</td>
+                <td> : </td>
+                <td> <?= kategori($score) ?> </td>
+            </tr>
+            <tr>
+                <td>Domisili</td>
+                <td> : </td>
+                <td> <?= $domisili ?> </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td> : </td>
+                <td> <?= $email ?> </td>
+            </tr>
+    </tbody>
 </fieldset>
