@@ -1,4 +1,5 @@
 <?php
+// Array
 $ar_prodi = ["SI" => "Sistem Informasi", "TI" => "Teknik Informatika", "ILKOM" => "Ilmu Komputer", "TE" => "Teknik Elektro"];
 $ar_skill = ["HTML" => 10, "CSS" => 10, "Javascript" => 20, "RWD Bootstrap" => 20, "PHP" => 30, "MySQL" => 30, "Laravel" => 40];
 $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
@@ -99,7 +100,9 @@ $domisili = ["Jakarta", "Bandung", "Bekasi", "Malang", "Surabaya", "Lainnya"];
 
 <fieldset style="background-color:blanchedalmond; width: 50%; right: 80px; position:absolute; top: 370px; left: 25%;">
 <?php
+  // untuk menghilangkan tulisan warning pada tampilan web saat data masih kosong
 error_reporting(0);
+
 if(isset($_POST['proses'])) {
     $nim = $_POST['nim'];
     $nama = $_POST['nama'];
@@ -110,7 +113,7 @@ if(isset($_POST['proses'])) {
     $email = $_POST['email'];
 }
 
-//
+//menentukan total score
 $score = 0;
 foreach($skill as $jumlah) {
     if(isset($ar_skill[$jumlah])) {
@@ -118,7 +121,7 @@ foreach($skill as $jumlah) {
     }
 }
 
-// prnggunaan fungsi untuk menentukan kategori skill
+// penggunaan fungsi untuk menentukan kategori skill
 function kategori($score) {
     if ($score >= 100 && $score <=150){
         return "Sangat Baik";
