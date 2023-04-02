@@ -4,10 +4,12 @@ require_once 'abstract.php';
 class Segitiga extends Bentuk2D{
     public $alas;
     public $tinggi;
+    public $sisi;
 
-    public function __construct($alas, $tinggi){
+    public function __construct($alas, $tinggi, $sisi){
         $this->alas = $alas;
         $this->tinggi = $tinggi;
+        $this->sisi = $sisi;
     }
     public function namaBidang(){
         echo "Segitiga";
@@ -17,7 +19,8 @@ class Segitiga extends Bentuk2D{
         return $luas;
     }
     public function kelilingBidang(){
-        $keliling = 
+        $keliling = $this->sisi + $this->sisi + $this->sisi;
+        return $keliling;
     }
 }
 ?>

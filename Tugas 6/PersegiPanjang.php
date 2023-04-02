@@ -18,6 +18,7 @@ class Persegi_Panjang extends Bentuk2D{
     }
     public function kelilingBidang(){
         $keliling = 2 * $this->panjang + 2 * $this->lebar;
+        return $keliling;
     }
 }
 ?>
