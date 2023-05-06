@@ -6,7 +6,8 @@ class Pesanan {
         $this->koneksi = $dbh;
     }
     public function Pesanan(){
-        $sql = "SELECT * FROM pesanan";
+        $sql = "SELECT pesanan.*, pelanggan.nama_pelanggan FROM pesanan
+        INNER JOIN pelanggan ON pelanggan.id = pesanan.pelanggan_id;";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
         $rs = $ps->fetchAll();

@@ -27,6 +27,7 @@ $pesanan = $model->Pesanan();
                     <th>No</th>
                     <th>Tanggal</th>
                     <th>Total</th>
+                    <th>Pelanggan Id</th>
                     <th>Nama Pelanggan</th>
                 </tr>
             </thead>
@@ -35,6 +36,7 @@ $pesanan = $model->Pesanan();
                     <th>No</th>
                     <th>Tanggal</th>
                     <th>Total</th>
+                    <th>Pelanggan Id</th>
                     <th>Nama Pelanggan</th>
                 </tr>
             </tfoot>
@@ -48,6 +50,7 @@ $pesanan = $model->Pesanan();
                     <td><?= $row['tanggal']?></td>
                     <td><?= $row['total']?></td>
                     <td><?= $row['pelanggan_id']?></td>
+                    <td><?= $row['nama_pelanggan']?></td>
                 </tr>
                 <?php
                 $no++;

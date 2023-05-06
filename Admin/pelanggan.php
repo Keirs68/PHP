@@ -32,7 +32,8 @@ $pelanggan = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
+                    <th>Kartu Id</th>
+                    <th>Jenis Kartu</th>
                 </tr>
             </thead>
             <tfoot>
@@ -45,7 +46,8 @@ $pelanggan = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
+                    <th>Kartu Id</th>
+                    <th>Jenis Kartu</th>
                 </tr>
             </tfoot>
             <tbody>
@@ -63,6 +65,7 @@ $pelanggan = $model->Pelanggan();
                     <td><?= $row['email']?></td>
                     <td><?= $row['alamat']?></td>
                     <td><?= $row['kartu_id']?></td>
+                    <td><?= $row['Jenis_kartu']?></td>
                 </tr>
                 <?php
                 $no++;
