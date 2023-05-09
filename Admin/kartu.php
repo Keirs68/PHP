@@ -17,8 +17,9 @@ $kartu = $model->Kartu();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
+        <!-- <i class="fas fa-table me-1"></i>
+        DataTable Example -->
+        <a href="index.php?url=kartu_form" class="btn btn-primary btn-sm">Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -29,6 +30,7 @@ $kartu = $model->Kartu();
                     <th>Nama</th>
                     <th>Diskon</th>
                     <th>Iuran</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tfoot>
@@ -38,6 +40,7 @@ $kartu = $model->Kartu();
                     <th>Nama</th>
                     <th>Diskon</th>
                     <th>Iuran</th>
+                    <th>Action</th>
                 </tr>
             </tfoot>
             <tbody>
@@ -51,6 +54,14 @@ $kartu = $model->Kartu();
                     <td><?= $row['nama']?></td>
                     <td><?= $row['diskon']?></td>
                     <td><?= $row['iuran']?></td>
+                    <td>
+                        <form action="kartu_controller.php" method="POST"></form>
+                        <a href="index.php?url=kartu_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                        <a href="" class="btn btn-warning btn-sm">Ubah</a>
+                        <a href="" class="btn btn-danger btn-sm">Hapus</a>
+
+                        <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                    </td>
                 </tr>
                 <?php
                 $no++;

@@ -29,7 +29,6 @@ class Produk {
         VALUES (?,?,?,?,?,?,?)";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data);
-
     }
     public function ubah(){
         
