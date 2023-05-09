@@ -23,8 +23,10 @@ $data_produk = $model->dataProduk();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
+        <!-- <i class="fas fa-table me-1"></i>
+        DataTable Example -->
+        <!-- Membuat tombol yang mengarahkan ke file produk._form.php -->
+        <a href="index.php?url=product_form" class="btn btn-primary  btn-sm">Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -38,6 +40,7 @@ $data_produk = $model->dataProduk();
                     <th>Stok</th>
                     <th>Mininal Stok</th>
                     <th>Jenis Produk</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tfoot>
@@ -50,6 +53,7 @@ $data_produk = $model->dataProduk();
                     <th>Stok</th>
                     <th>Mininal Stok</th>
                     <th>Jenis Produk</th>
+                    <th>Action</th>
                 </tr>
             </tfoot>
             <tbody>
@@ -66,6 +70,15 @@ $data_produk = $model->dataProduk();
                     <td><?= $row['stok']?></td>
                     <td><?= $row['min_stok']?></td>
                     <td><?= $row['jenis_produk_id']?></td>
+                    <td>
+                        <form action="produk_controller.php" method="POST">
+                            <a href="index.php?url=product_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="" class="btn btn-warning btn-sm">Ubah</a>
+                            <a href="" class="btn btn-danger btn-sm">Hapus</a>
+
+                            <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                    </form>
+                    </td>
                 </tr>
                 <?php
                 $no++;
