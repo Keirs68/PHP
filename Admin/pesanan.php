@@ -46,25 +46,25 @@ $pesanan = $model->Pesanan();
             <tbody>
                 <?php
                 $no = 1;
-                foreach($pesanan as $row){
+                foreach ($pesanan as $row) {
                 ?>
-                <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $row['tanggal']?></td>
-                    <td><?= $row['total']?></td>
-                    <td><?= $row['pelanggan_id']?></td>
-                    <td><?= $row['nama_pelanggan']?></td>
-                    <td>
-                        <form action="pesanan_controller.php" method="POST"></form>
-                        <a href="index.php?url=pesanan_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                        <a href="" class="btn btn-warning btn-sm">Ubah</a>
-                        <a href="" class="btn btn-danger btn-sm">Hapus</a>
-
-                        <input type="hidden" name="idx" value="<?= $row['id'] ?>">
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?= $no ?></td>
+                        <td><?= $row['tanggal'] ?></td>
+                        <td><?= $row['total'] ?></td>
+                        <td><?= $row['pelanggan_id'] ?></td>
+                        <td><?= $row['nama_pelanggan'] ?></td>
+                        <td>
+                            <form action="pesanan_controller.php" method="POST"></form>
+                            <a href="index.php?url=pesanan_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="index.php?url=pesanan_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                            <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+                            
+                            <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                        </td>
+                    </tr>
                 <?php
-                $no++;
+                    $no++;
                 }
                 ?>
             </tbody>

@@ -1,5 +1,5 @@
 <?php 
-$dbname = 'dbtoko1';
+$dbname = 'dbtoko';
 $dsn = 'mysql:dbname='.$dbname.';host:localhost';
 $user = 'root'; $password = '';
 try {
@@ -7,7 +7,7 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "Koneksi Sukses";
 }catch(PDOException $e) {
-    echo "Database Tidak Konek".$e->getMessage();
+    echo "Database Tidak Koneksi".$e->getMessage();
 }
 
 ?>

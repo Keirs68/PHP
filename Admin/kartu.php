@@ -46,25 +46,25 @@ $kartu = $model->Kartu();
             <tbody>
                 <?php
                 $no = 1;
-                foreach($kartu as $row){
+                foreach ($kartu as $row) {
                 ?>
-                <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $row['kode']?></td>
-                    <td><?= $row['nama']?></td>
-                    <td><?= $row['diskon']?></td>
-                    <td><?= $row['iuran']?></td>
-                    <td>
-                        <form action="kartu_controller.php" method="POST"></form>
-                        <a href="index.php?url=kartu_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                        <a href="" class="btn btn-warning btn-sm">Ubah</a>
-                        <a href="" class="btn btn-danger btn-sm">Hapus</a>
-
-                        <input type="hidden" name="idx" value="<?= $row['id'] ?>">
-                    </td>
-                </tr>
+                    <tr>
+                        <td><?= $no ?></td>
+                        <td><?= $row['kode'] ?></td>
+                        <td><?= $row['nama'] ?></td>
+                        <td><?= $row['diskon'] ?></td>
+                        <td><?= $row['iuran'] ?></td>
+                        <td>
+                            <form action="kartu_controller.php" method="POST"></form>
+                            <a href="index.php?url=kartu_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                            <a href="index.php?url=kartu_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                            <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+                            
+                            <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                        </td>
+                    </tr>
                 <?php
-                $no++;
+                    $no++;
                 }
                 ?>
             </tbody>

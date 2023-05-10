@@ -28,7 +28,15 @@ class Pesanan {
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data);
     }
-    public function ubah(){
-        
+    public function ubah($data){
+        $sql = "UPDATE pesanan SET tanggal=?, total=?, pelanggan_id=?
+        WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);    
+    }
+    public function hapus($id){
+        $sql = "DELETE FROM pesanan WHERE id= ?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
     }
 }

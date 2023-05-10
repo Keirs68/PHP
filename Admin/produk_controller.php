@@ -23,13 +23,20 @@ $data = [
 ];
 $model = new Produk();
 $tombol = $_REQUEST['proses'];
-switch($tombol) {
-    case 'simpan':$model->simpan($data); break;
+switch ($tombol) {
+    case 'simpan':
+        $model->simpan($data);
+        break;
     case 'ubah':
-        $data[] = $_POST['idx']; $model->ubah($data); break;
+        $data[] = $_POST['idx'];
+        $model->ubah($data);
+        break;
+    case 'hapus':
+        unset($data);
+        $model->hapus($_POST['idx']);
+        break;
     default:
-    header('location:index.php?url=product');
-    break;
+        header('location:index.php?url=product');
+        break;
 }
 header('location:index.php?url=product');
-?>

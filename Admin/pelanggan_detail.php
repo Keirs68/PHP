@@ -10,7 +10,6 @@ $pelanggan = $model->getPelanggan($id);
     <div class="card mb-4">
         <div class="card-body">
             <div class="card-header">
-
                 <h3>Detail Pelanggan</h3>
                 <br>
                 <table class="table">
