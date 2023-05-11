@@ -7,90 +7,100 @@ $data_produk = $model->dataProduk();
 // foreach ($data_produk as $row){
 //     print $row['kode'];
 // }
+$sesi = $_SESSION['MEMBER'];
+if (isset($sesi)) {
 ?>
 
-<h1 class="mt-4">Tables</h1>
-<ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-    <li class="breadcrumb-item active">Tables</li>
-</ol>
-<div class="card mb-4">
-    <div class="card-body">
-        DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
-        <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
-        .
+    <h1 class="mt-4">Tables</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+        <li class="breadcrumb-item active">Tables</li>
+    </ol>
+    <div class="card mb-4">
+        <div class="card-body">
+            DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+            <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+            .
+        </div>
     </div>
-</div>
-<div class="card mb-4">
-    <div class="card-header">
-        <!-- <i class="fas fa-table me-1"></i>
+    <div class="card mb-4">
+        <div class="card-header">
+            <!-- <i class="fas fa-table me-1"></i>
         DataTable Example -->
-        <!-- Membuat tombol yang mengarahkan ke file produk._form.php -->
-        <a href="index.php?url=product_form" class="btn btn-primary  btn-sm">Tambah</a>
-    </div>
-    <div class="card-body">
-        <table id="datatablesSimple">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Harga Beli</th>
-                    <th>Harga Jual</th>
-                    <th>Stok</th>
-                    <th>Mininal Stok</th>
-                    <th>Jenis Produk</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <th>No</th>
-                    <th>Kode</th>
-                    <th>Nama</th>
-                    <th>Harga Beli</th>
-                    <th>Harga Jual</th>
-                    <th>Stok</th>
-                    <th>Mininal Stok</th>
-                    <th>Jenis Produk</th>
-                    <th>Action</th>
-                </tr>
-            </tfoot>
-            <tbody>
-                <?php
-                $no = 1;
-                foreach ($data_produk as $row) {
-                ?>
+            <!-- Membuat tombol yang mengarahkan ke file produk._form.php -->
+            <a href="index.php?url=product_form" class="btn btn-primary  btn-sm">Tambah</a>
+        </div>
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
                     <tr>
-                        <td><?= $no ?></td>
-                        <td><?= $row['kode'] ?></td>
-                        <td><?= $row['nama'] ?></td>
-                        <td><?= $row['harga_beli'] ?></td>
-                        <td><?= $row['harga_jual'] ?></td>
-                        <td><?= $row['stok'] ?></td>
-                        <td><?= $row['min_stok'] ?></td>
-                        <td><?= $row['jenis_produk_id'] ?></td>
-                        <td>
-                            <form action="produk_controller.php" method="POST">
-                                <a href="index.php?url=product_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                                <a href="index.php?url=product_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
-                                <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
-
-
-                                <input type="hidden" name="idx" value="<?= $row['id'] ?>">
-                            </form>
-                        </td>
+                        <th>No</th>
+                        <th>Kode</th>
+                        <th>Nama</th>
+                        <th>Harga Beli</th>
+                        <th>Harga Jual</th>
+                        <th>Stok</th>
+                        <th>Mininal Stok</th>
+                        <th>Jenis Produk</th>
+                        <th>Action</th>
                     </tr>
-                <?php
-                    $no++;
-                }
-                ?>
-            </tbody>
-        </table>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode</th>
+                        <th>Nama</th>
+                        <th>Harga Beli</th>
+                        <th>Harga Jual</th>
+                        <th>Stok</th>
+                        <th>Mininal Stok</th>
+                        <th>Jenis Produk</th>
+                        <th>Action</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <?php
+                    $no = 1;
+                    foreach ($data_produk as $row) {
+                    ?>
+                        <tr>
+                            <td><?= $no ?></td>
+                            <td><?= $row['kode'] ?></td>
+                            <td><?= $row['nama'] ?></td>
+                            <td><?= $row['harga_beli'] ?></td>
+                            <td><?= $row['harga_jual'] ?></td>
+                            <td><?= $row['stok'] ?></td>
+                            <td><?= $row['min_stok'] ?></td>
+                            <td><?= $row['jenis_produk_id'] ?></td>
+                            <td>
+                                <form action="produk_controller.php" method="POST">
+                                    <a href="index.php?url=product_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                                    <a href="index.php?url=product_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                    <?php
+                                    if($sesi['role' != 'staff']){
+                                
+                                    ?>
+                                    <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+
+
+                                    <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                                    <?php } ?>
+                                </form>
+                            </td>
+                        </tr>
+                    <?php
+                        $no++;
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
-</div>
+    </div>
 
 <?php
+} else {
+    echo '<script> alert("anda tidak boleh masuk masuk");history.back();</script>';
+}
 // include_once 'bottom.php';
 ?>
