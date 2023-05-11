@@ -55,12 +55,13 @@ $kartu = $model->Kartu();
                         <td><?= $row['diskon'] ?></td>
                         <td><?= $row['iuran'] ?></td>
                         <td>
-                            <form action="kartu_controller.php" method="POST"></form>
-                            <a href="index.php?url=kartu_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                            <a href="index.php?url=kartu_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
-                            <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
-                            
-                            <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                            <form action="kartu_controller.php" method="POST">
+                                <a href="index.php?url=kartu_detail&id=<?= $row['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                                <a href="index.php?url=kartu_form&idedit=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+
+                                <input type="hidden" name="idx" value="<?= $row['id'] ?>">
+                            </form>
                         </td>
                     </tr>
                 <?php

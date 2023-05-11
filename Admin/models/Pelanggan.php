@@ -14,7 +14,7 @@ class Pelanggan {
         return $rs;
     }
     public function getPelanggan($id){
-        $sql = " SELECT pelanggan.*, kartu.nama AS Jenis_kartu FROM pelanggan
+        $sql = "SELECT pelanggan.*, kartu.nama AS Jenis_kartu FROM pelanggan
         INNER JOIN kartu ON kartu.id = pelanggan.kartu_id WHERE pelanggan.id = ?";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute([$id]);
@@ -29,15 +29,15 @@ class Pelanggan {
         $ps->execute($data);
     }
     public function ubah($data){
-        $sql = "UPDATE pelanggan SET kode=?, nama_pelanggan=?, jk=?, tmp_lahir=?, tgl_lahir=?, email=?, alamat=?, kartu_id=?
-        WHERE id= ?";
+        $sql = "UPDATE pelanggan SET kode = ?, nama_pelanggan = ?, jk = ?, tmp_lahir = ?, tgl_lahir = ?, email = ?, alamat = ?, kartu_id = ?
+        WHERE id = ?";
         $ps = $this->koneksi->prepare($sql);
-        $ps->execute($data);    
+        $ps->execute($data); 
     }
     public function hapus($id){
-        $sql = "DELETE FROM pelanggan WHERE id= ?";
+        $sql = "DELETE FROM pelanggan WHERE id = ?";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute([$id]);
-    }
+    }   
 }   
 ?>

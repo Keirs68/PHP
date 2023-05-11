@@ -27,7 +27,6 @@ switch ($tombol) {
         break;
     case 'hapus':
         unset($data);
-        //$data[] = $_POST['idx']; 
         $model->hapus($_POST['idx']);
         break;
     default:

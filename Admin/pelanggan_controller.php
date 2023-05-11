@@ -12,7 +12,7 @@ $tgl_lahir = $_POST['tgl_lahir'];
 $email = $_POST['email'];
 $alamat = $_POST['alamat'];
 $kartu_id = $_POST['kartu_id'];
-$Jenis_kartu = $_POST['Jenis_kartu'];
+
 
 // menangkap form diatas, dijadikan array
 $data = [
@@ -24,7 +24,7 @@ $data = [
     $email,
     $alamat,
     $kartu_id,
-    $Jenis_kartu
+   
 ];
 $model = new Pelanggan();
 $tombol = $_REQUEST['proses'];
@@ -38,7 +38,6 @@ switch ($tombol) {
         break;
     case 'hapus':
         unset($data);
-        //$data[] = $_POST['idx']; 
         $model->hapus($_POST['idx']);
         break;
     default:

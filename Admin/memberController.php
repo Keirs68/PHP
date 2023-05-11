@@ -17,6 +17,6 @@ if(!empty($rs)){
     $_SESSION['MEMBER'] = $rs;
     header('Location:index.php?url=product');
 }else {
-    echo '<script> Alert("user/password anda salah");history.back();</script>';
+    echo '<script> alert("user/password anda salah");history.back();</script>';
 }
 ?>
