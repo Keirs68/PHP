@@ -16,7 +16,7 @@
 	</section>
 	<!-- End Banner Area -->
 <section class="col-lg-6">
-<form action="Admin/memberController.php" method="POST">
+<form action="./Admin/memberController.php" method="POST">
     <div class="form-group row">
         <label for="text" class="col-4 col-form-label">Username</label>
         <div class="col-8">

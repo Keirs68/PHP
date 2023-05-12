@@ -15,8 +15,7 @@ $model = new Member();
 $rs = $model->cekLogin($data);
 if(!empty($rs)){
     $_SESSION['MEMBER'] = $rs;
-    header('Location:index.php?url=product');
+    header('Location:http://localhost/PHP-HTP/Webnative/Admin/index.php?url=product');
 }else {
     echo '<script> alert("user/password anda salah");history.back();</script>';
 }
-?>
