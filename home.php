@@ -15,10 +15,16 @@ $prod = $produk->dataProduk();
 					<div class="row single-slide align-items-center d-flex">
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
-								<h1>Nike New <br>Collection!</h1>
+								<h1>Victus New <br> Collection!</h1>
 
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-									dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+								<p>IMMERSIVE PERFORMANCE ANYWHERE.
+								   Equipped with up to a NVIDIA® GeForce RTX™ 3050 Ti Laptop graphics, this’ll take you anywhere on your gaming journey. 
+								   BOOST PERFORMANCE WITH AI
+								   NVIDIA DLSS massively increases performance, without sacrificing quality, by using cutting-edge AI.
+								   MORE EMERSIVE EXPERIENCES
+								   Ray Tracing enables the most realistic and immersive graphics, which runs fast thanks for 2nd gen RT Cores.
+								   OPTIMISED POWER AND PERFORMANCE
+								   NVIDIA Max-Q is a suite of technologies powered by AI that optimise laptops to deliver high performance in thin form factors.</p>
 								<div class="add-bag d-flex align-items-center">
 									<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
 									<span class="add-text text-uppercase">Add to Bag</span>
@@ -27,7 +33,7 @@ $prod = $produk->dataProduk();
 						</div>
 						<div class="col-lg-7">
 							<div class="banner-img">
-								<img class="img-fluid" src="img/banner/banner-img.png" alt="">
+								<img class="img-fluid" src="img/banner/img1.png" alt="">
 							</div>
 						</div>
 					</div>
@@ -115,10 +121,10 @@ $prod = $produk->dataProduk();
 					<div class="col-lg-8 col-md-8">
 						<div class="single-deal">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/category/c1.jpg" alt="">
+							<img class="img-fluid w-100" src="img/category/c6.png" alt="">
 							<a href="img/category/c1.jpg" class="img-pop-up" target="_blank">
 								<div class="deal-details">
-									<h6 class="deal-title">Sneaker for Sports</h6>
+									<h6 class="deal-title">Electronic Product</h6>
 								</div>
 							</a>
 						</div>
@@ -126,10 +132,10 @@ $prod = $produk->dataProduk();
 					<div class="col-lg-4 col-md-4">
 						<div class="single-deal">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/category/c2.jpg" alt="">
+							<img class="img-fluid w-100" src="img/category/c7.png" alt="">
 							<a href="img/category/c2.jpg" class="img-pop-up" target="_blank">
 								<div class="deal-details">
-									<h6 class="deal-title">Sneaker for Sports</h6>
+									<h6 class="deal-title">Food Product</h6>
 								</div>
 							</a>
 						</div>
@@ -137,10 +143,10 @@ $prod = $produk->dataProduk();
 					<div class="col-lg-4 col-md-4">
 						<div class="single-deal">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/category/c3.jpg" alt="">
+							<img class="img-fluid w-100" src="img/category/c11.png" alt="">
 							<a href="img/category/c3.jpg" class="img-pop-up" target="_blank">
 								<div class="deal-details">
-									<h6 class="deal-title">Product for Couple</h6>
+									<h6 class="deal-title">Drink Product</h6>
 								</div>
 							</a>
 						</div>
@@ -148,10 +154,10 @@ $prod = $produk->dataProduk();
 					<div class="col-lg-8 col-md-8">
 						<div class="single-deal">
 							<div class="overlay"></div>
-							<img class="img-fluid w-100" src="img/category/c4.jpg" alt="">
+							<img class="img-fluid w-100" src="img/category/c10.png" alt="">
 							<a href="img/category/c4.jpg" class="img-pop-up" target="_blank">
 								<div class="deal-details">
-									<h6 class="deal-title">Sneaker for Sports</h6>
+									<h6 class="deal-title">Furniture Product</h6>
 								</div>
 							</a>
 						</div>
@@ -198,7 +204,7 @@ $prod = $produk->dataProduk();
 					<div class="col-lg-3 col-md-6">
 
 						<div class="single-product">
-							<img class="img-fluid" src="img/product/p1.jpg" alt="">
+							<img class="img-fluid" src="https://cdn.kibrispdr.org/data/981/troli-keranjang-belanja-png-0.jpg" alt="">
 							<div class="product-details">
 								<!-- panggil data pelanggan-->
 								<h6><?= $produk['nama'] ?></h6>
@@ -572,14 +578,14 @@ $prod = $produk->dataProduk();
 				<div class="active-exclusive-product-slider">
 					<!-- single exclusive carousel -->
 					<div class="single-exclusive-slider">
-						<img class="img-fluid" src="img/product/e-p1.png" alt="">
+						<img class="img-fluid" src="img/product/e-p2.png" alt="">
 						<div class="product-details">
 							<div class="price">
 								<h6>$150.00</h6>
 								<h6 class="l-through">$210.00</h6>
 							</div>
-							<h4>addidas New Hammer sole
-								for Sports person</h4>
+							<h4>VICTUS 15
+								GAMING LAPTOP</h4>
 							<div class="add-bag d-flex align-items-center justify-content-center">
 								<a class="add-btn" href=""><span class="ti-bag"></span></a>
 								<span class="add-text text-uppercase">Add to Bag</span>
